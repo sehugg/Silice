@@ -1,0 +1,74 @@
+{
+  "name": "8bitworkshop",
+  "variants": [
+    {
+      "name"      : "configurable",
+      "framework" : "8bitworkshop.v",
+      "pins"      : [ 
+        {"set"    : "ntsc", "define" : "NTSC=1"} 
+      ],
+      "builders": [
+        {
+          "builder" : "shell",
+          "command" : "8bitworkshop.sh",
+          "description": "Simulates with 8bitworkshop"
+        }
+      ]
+    }
+  ],
+  "pins": {
+    "ntsc": [
+      {
+        "name": "hsync",
+        "type": "uint1",
+        "io": "output"
+      },
+      {
+        "name": "vsync",
+        "type": "uint1",
+        "io": "output"
+      },
+      {
+        "name": "rgb",
+        "type": "uint3",
+        "io": "output"
+      }
+    ],
+    "paddles": [
+      {
+        "name": "hpaddle",
+        "type": "uint1",
+        "io": "input"
+      },
+      {
+        "name": "vpaddle",
+        "type": "uint1",
+        "io": "input"
+      }
+    ],
+    "switches": [
+      {
+        "name": "switches_p1",
+        "type": "uint8",
+        "io": "input"
+      },
+      {
+        "name": "switches_p2",
+        "type": "uint8",
+        "io": "input"
+      }
+    ],
+    "keyboard": [
+      {
+        "name": "keycode",
+        "type": "uint8",
+        "io": "input"
+      },
+      {
+        "name": "keystrobe",
+        "type": "uint1",
+        "io": "output"
+      }
+    ]
+  }
+}

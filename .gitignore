@@ -11,3 +11,4 @@ antlr/*.tokens
 antlr/*Listener.*
 antlr/*Lexer.*
 antlr/*Parser.*
+*~
